@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.git/
+.gitignore
+runs/
+*.md
+_debug_*.py
+.last_job_id
+.DS_Store
+.idea/
+.vscode/

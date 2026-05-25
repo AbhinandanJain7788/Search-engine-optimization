@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Content-Length: 9320
+Connection: keep-alive
+Date: Thu, 21 May 2026 09:42:41 GMT
+server: Server
+x-amz-rid: 9YM5V1AK80KYM6SCWENR
+x-amz-request-id: F1H6C88AGZ3DH8XT
+last-modified: Fri, 15 May 2026 07:58:54 GMT
+etag: "e8d0d804cb5b5dbcd65b9aa518bfdebe"
+x-amz-server-side-encryption: AES256
+accept-ranges: bytes
+strict-transport-security: max-age=47474747; includeSubDomains; preload
+vary: Accept-Encoding,User-Agent
+x-frame-options: SAMEORIGIN
+X-Cache: Miss from cloudfront
+Via: 1.1 75aefb46842baff498bf4f0dd1592dc0.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: DEL51-P6
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: qGMGD9hVVOBMijhPMe1g3rbUmaL83dSOjAsPWhjY4KH5w052Syf18g==
+

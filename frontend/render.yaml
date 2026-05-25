@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: claude-seo
+    runtime: docker
+    plan: starter   # 512 MB; bump to standard (2 GB) if you hit Chromium OOM
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/commands
+    envVars:
+      - key: PORT
+        value: 7860
+    autoDeploy: true

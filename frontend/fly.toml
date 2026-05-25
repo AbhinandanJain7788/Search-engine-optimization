@@ -1,0 +1,34 @@
+# Fly.io config. Run `fly launch --no-deploy` first to claim an app name,
+# then replace `app = "claude-seo"` below with what fly assigned you.
+app = "claude-seo"
+primary_region = "bom"  # Mumbai. Change to your nearest region.
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+  [http_service.concurrency]
+    type = "connections"
+    hard_limit = 25
+    soft_limit = 20
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 1024  # Playwright + Chromium need ~512 MB headroom
+
+[[services.tcp_checks]]
+  grace_period = "30s"
+  interval = "15s"
+  timeout = "2s"
+  port = 8080

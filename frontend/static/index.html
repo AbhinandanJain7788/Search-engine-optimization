@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude SEO &mdash; Audit Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="bg-gradient"></div>
+
+  <header>
+    <div class="brand">
+      <span class="logo-mark"></span>
+      <div>
+        <div class="brand-name">Claude SEO</div>
+        <div class="brand-sub">Universal SEO analysis console</div>
+      </div>
+    </div>
+    <div class="header-meta">
+      <span class="pill">v1.9.9</span>
+      <span class="pill">24 sub-skills</span>
+      <span class="pill">18 agents</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Audit any website. <span class="accent">In one prompt.</span></h1>
+      <p class="lede">Pick what you want. Drop a URL. The audit pipeline runs the same agent stack as <code>/seo</code> in Claude Code.</p>
+
+      <div class="search-wrap" id="searchWrap">
+        <div class="search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="text" id="searchInput" placeholder="Search a command... (e.g. audit, schema, GEO, technical)" autocomplete="off" />
+          <button class="search-go" id="searchGo">Start</button>
+        </div>
+        <div class="dropdown" id="dropdown" hidden></div>
+      </div>
+
+      <div class="quickrow" id="quickrow"></div>
+    </section>
+
+    <section class="viz-section">
+      <div class="viz-header">
+        <div>
+          <h2>Agent Network</h2>
+          <p class="muted">Live view of which sub-agent is working. Hover a node for what it does.</p>
+        </div>
+        <div class="viz-legend">
+          <span><i class="dot idle"></i> idle</span>
+          <span><i class="dot active"></i> running</span>
+          <span><i class="dot ok"></i> done</span>
+          <span><i class="dot warn"></i> warning</span>
+          <span><i class="dot fail"></i> failed</span>
+        </div>
+      </div>
+      <div id="viz"></div>
+      <div class="tooltip" id="vizTooltip" hidden></div>
+    </section>
+  </main>
+
+  <!-- Confirm URL modal -->
+  <div class="modal" id="confirmModal" hidden>
+    <div class="modal-card">
+      <h3>Confirm audit</h3>
+      <div class="form-row">
+        <label>Command</label>
+        <div class="cmd-pill" id="confirmCmd">audit</div>
+      </div>
+      <div class="form-row">
+        <label for="urlInput">Website URL</label>
+        <input type="url" id="urlInput" placeholder="https://example.com" />
+        <div class="hint" id="urlHint"></div>
+      </div>
+      <div class="form-row">
+        <label>What will run</label>
+        <ul class="checklist" id="checklist"></ul>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-ghost" id="cancelConfirm">Cancel</button>
+        <button class="btn-primary" id="startAudit">Run Audit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live run panel -->
+  <div class="runpanel" id="runPanel" hidden>
+    <div class="runpanel-head">
+      <div>
+        <div class="run-title">Auditing <span id="runUrl"></span></div>
+        <div class="run-sub" id="runCmdLabel"></div>
+      </div>
+      <div class="runpanel-actions">
+        <button class="btn-stop" id="stopBtn">Stop</button>
+        <button class="btn-ghost" id="closeRun" hidden>Close</button>
+      </div>
+    </div>
+    <div class="runpanel-grid">
+      <div class="run-events">
+        <div class="run-events-head">Live progress</div>
+        <ul id="eventList"></ul>
+      </div>
+      <div class="run-summary" id="runSummary" hidden>
+        <div class="score-card">
+          <div class="score-label">Overall SEO Health Score</div>
+          <div class="score-value" id="scoreValue">&mdash;</div>
+        </div>
+        <div class="cat-grid" id="catGrid"></div>
+        <div class="download-row">
+          <a id="downloadPdf" class="btn-primary" target="_blank" rel="noopener">Download PDF</a>
+          <a id="downloadMd" class="btn-ghost" target="_blank" rel="noopener">Markdown</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Frontend for <a href="https://github.com/AgriciDaniel/claude-seo" target="_blank" rel="noopener">claude-seo</a> &middot; runs locally on <code>localhost:7860</code></span>
+    <span>Same audit rubric as <code>/seo audit</code> in Claude Code</span>
+  </footer>
+
+  <script type="module" src="/static/viz.js"></script>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "url": "https://www.flipkart.com",
+  "command": "page",
+  "overall": 76,
+  "scores": {
+    "technical": 50,
+    "content": 100,
+    "onpage": 55,
+    "schema": 90,
+    "performance": -1,
+    "ai_readiness": 100,
+    "images": 89
+  },
+  "weights": {
+    "technical": 22,
+    "content": 23,
+    "onpage": 20,
+    "schema": 10,
+    "performance": 10,
+    "ai_readiness": 10,
+    "images": 5
+  },
+  "covered_weight": 90,
+  "robots": {
+    "present": false,
+    "ai_blocks": 0,
+    "ai_ua_total": 24,
+    "sitemap_urls": [],
+    "ua_count": 0,
+    "size": 0
+  },
+  "sitemap_status": -1,
+  "llms_status": -1,
+  "rendered_ok": true,
+  "rendered_status": 200,
+  "title": "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!",
+  "description": "",
+  "schema_types": [
+    "Organization"
+  ]
+}

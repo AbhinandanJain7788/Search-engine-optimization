@@ -1,0 +1,39 @@
+{
+  "url": "https://example.com",
+  "command": "audit",
+  "overall": 45,
+  "scores": {
+    "technical": 40,
+    "content": 50,
+    "onpage": 45,
+    "schema": 10,
+    "performance": -1,
+    "ai_readiness": 80,
+    "images": 50
+  },
+  "weights": {
+    "technical": 22,
+    "content": 23,
+    "onpage": 20,
+    "schema": 10,
+    "performance": 10,
+    "ai_readiness": 10,
+    "images": 5
+  },
+  "covered_weight": 90,
+  "robots": {
+    "present": false,
+    "ai_blocks": 0,
+    "ai_ua_total": 24,
+    "sitemap_urls": [],
+    "ua_count": 0,
+    "size": 0
+  },
+  "sitemap_status": 404,
+  "llms_status": 404,
+  "rendered_ok": true,
+  "rendered_status": 200,
+  "title": "Example Domain",
+  "description": "",
+  "schema_types": []
+}

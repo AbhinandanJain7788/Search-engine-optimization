@@ -1,0 +1,29 @@
+HTTP/1.1 404 Not Found
+Content-Type: text/html;charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Date: Thu, 21 May 2026 09:42:42 GMT
+server: Server
+x-amz-rid: 61ZV5BRXENRNZJXEKHEV
+set-cookie: session-id=257-3581454-8906423; Domain=.amazon.in; Expires=Fri, 21-May-2027 09:42:42 GMT; Path=/; Secure
+set-cookie: session-id-time=2082787201l; Domain=.amazon.in; Expires=Fri, 21-May-2027 09:42:42 GMT; Path=/; Secure
+set-cookie: i18n-prefs=INR; Domain=.amazon.in; Expires=Fri, 21-May-2027 09:42:42 GMT; Path=/
+set-cookie: lc-acbin=en_IN; Domain=.amazon.in; Expires=Fri, 21-May-2027 09:42:42 GMT; Path=/
+cache-control: no-cache
+pragma: no-cache
+expires: -1
+x-xss-protection: 1;
+accept-ch: ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-full-version-list,sec-ch-ua-platform,sec-ch-ua-platform-version
+content-security-policy: upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/
+accept-ch-lifetime: 86400
+x-content-type-options: nosniff
+content-security-policy-report-only: default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/
+strict-transport-security: max-age=47474747; includeSubDomains; preload
+vary: X-Amazon-Wtm-Tag-OPF-IN-ENV-VAR-LRA,X-Amazon-Wtm-Tag-OPF-IN-ENV-VAR-DP-LRA,Accept-Encoding,User-Agent
+x-frame-options: SAMEORIGIN
+X-Cache: Error from cloudfront
+Via: 1.1 2ccb5c74843a981956109951c6465318.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: DEL51-P6
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: x4oZB7eIGS0yIzDrW--cKII6jyM0yF7lbA6I6kqok5jaQkk-M-Kjpw==
+
