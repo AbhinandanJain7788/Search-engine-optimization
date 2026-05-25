@@ -1,6 +1,6 @@
 # Claude SEO frontend deploy image
 # Uses the official Playwright Python image (Chromium + system deps pre-baked).
-FROM mcr.microsoft.com/playwright/python:v1.55.0-jammy
+FROM mcr.microsoft.com/playwright/python:v1.60.0-jammy
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
